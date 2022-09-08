@@ -22,8 +22,7 @@ return new class extends Migration
             $table->string('asistenciaNombreTipo');
             $table->string('asistenciaFechaInicio');
             $table->string('asistenciaFechaTermino');
-            $table->string('asistenciaDias');
-            $table->string('tomados');            
+            $table->string('asistenciaDiasTomados');           
             $table->timestamps();
         });
     }
