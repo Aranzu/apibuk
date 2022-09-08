@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TrabajadorController;
+use App\Http\Controllers\LicenciaPermisoController;
+use App\Http\Controllers\VacacionesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +25,8 @@ Route::get('/trabajador', [TrabajadorController::class,'index']);
 Route::post('/trabajador', [TrabajadorController::class,'store']);
 Route::put('/trabajador/{id}', [TrabajadorController::class,'update']);
 Route::delete('/trabajador/{id}', [TrabajadorController::class,'destroy']);
+
+Route::get('/vacaciones', [VacacionesController::class,'index']);
+
+Route::get('/licenciapermiso', [LicenciaPermisoController::class,'index']);
 

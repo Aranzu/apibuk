@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Trabajador extends Model
 {
     use HasFactory;
-    protected $fillable = ['nombre', 'rut', 'cargo'];
-    public $table = "trabajador";
-    
+    protected $fillable = ['empleado', 'empleadoRut', 'nombreCompleto','TrabajoCargo', 'TrabajoFamiliaCargo', 'departamento','centroCosto', 'lmyPermisos', 'vac'];
+    public $table = "trabajador";    
 }

@@ -15,9 +15,15 @@ return new class extends Migration
     {
         Schema::create('trabajador', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
-            $table->string('rut');
-            $table->string('cargo');
+            $table->string('empleado');
+            $table->string('empleadoRut');
+            $table->string('nombreCompleto');
+            $table->string('TrabajoCargo');
+            $table->string('TrabajoFamiliaCargo');
+            $table->string('departamento');
+            $table->string('centroCosto');
+            $table->string('lmyPermisos');
+            $table->string('vac');
             $table->timestamps();
         });
     }
