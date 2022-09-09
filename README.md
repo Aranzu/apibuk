@@ -5,8 +5,11 @@ BBDD: mysql
 api routes:
 
 http://127.0.0.1:8000/api/trabajador
+
 http://127.0.0.1:8000/api/vacaciones
+
 http://127.0.0.1:8000/api/licenciapermiso
+
 
 hacer el siguiente insert:
 
