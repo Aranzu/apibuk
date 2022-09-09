@@ -18,10 +18,9 @@ class TrabajadorController extends Controller
         return $trabajador;
     }
 
-
     public function consRutTra($empleadoRut)
     {
-        return Trabajador::findOrFail($empleadoRut)->get;        
+        return Trabajador::findOrFail($empleadoRut);        
     }
 
 }

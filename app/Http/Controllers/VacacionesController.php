@@ -20,7 +20,7 @@ class VacacionesController extends Controller
     }
     public function consRutVac($rut)
     {
-        return Vacaciones::findOrFail($rut)->get;
+        return Vacaciones::findOrFail($rut);
     }
 
 

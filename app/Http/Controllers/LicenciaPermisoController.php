@@ -19,8 +19,8 @@ class LicenciaPermisoController extends Controller
         return $licenciaPermiso;
     }
 
-    public function consRutTra($rut)
+    public function consRutlic($rut)
     {
-        return LicenciaPermiso::findOrFail($rut)->get;
+        return LicenciaPermiso::findOrFail($rut);
     }
 }
