@@ -83,6 +83,12 @@ class TrabajadorController extends Controller
         return $trabajador;
     }
 
+    public function consultaIndividual($id)
+    {
+        $trabajador = Trabajador::findOrFail($id);  
+        return $trabajador;
+    }
+
     /**
      * Remove the specified resource from storage.
      *
