@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::create('vacaciones', function (Blueprint $table) {
-            $table->id();
             $table->string('nombre');
             $table->string('apellido');
             $table->string('segundoApellido');
@@ -28,7 +27,6 @@ return new class extends Migration
             $table->string('division');
             $table->string('departamento');
             $table->string('area');
-            $table->timestamps();
         });
     }
 

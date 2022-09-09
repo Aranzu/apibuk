@@ -1,64 +1,18 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+API que provee trabajadores, vacaciones y licencias/permisos
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+BBDD: mysql
 
-## About Laravel
+hacer el siguiente insert:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Tabla trabajadores:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+INSERT INTO `trabajador` (`empleado`, `empleadoRut`, `nombreCompleto`, `TrabajoCargo`, `TrabajoFamiliaCargo`, `departamento`, `centroCosto`, `lmyPermisos`, `vac`) VALUES ('SI', '43534663', 'Luis Alfredo Arce Contreras', 'Enfermero', 'Emergencias', 'Salud', '0', '2022-03-02', '2021-04-03'), ('NO', '54645778', 'Aladino Segundo Espinoza Saavedra', 'Recepcionista', 'Seguridad', 'Seguridad', '0', '2021-08-08', '2021-09-08'), ('SI', '546568565', 'Luis Rodríguez Alcina', 'Grua', 'Operaciones', 'Operaciones', '0', '2022-05-22', '2021-05-22'), ('SI', '78212354', 'Eduardo Javier Aracena Ávalos', 'Limpiador', 'Aseo', 'Aseo', '0', '2002-08-16', '2019-05-05'), ('SI', '34568667', 'Ramón Velásquez Cayupe', 'Mata Jabalies', 'Caza', 'Ganaderia', '0', '2019-12-12', '2019-11-12'), ('SI', '435786778', 'Ximena Loreto Sánchez Figueroa', 'Técnico informático', 'Informatica', 'TI', '0', '2021-04-04', '2021-08-03'), ('SI', '34576867', 'Isabel Margarita Pérez Moore', 'Mata moscas', 'Plagas', 'Control Plagas', '0', '2018-02-02', '2020-02-02'), ('SI', '1754822155', 'Jose Jorge Jimenez Jota', 'Mata Pulgas', 'Plagas', 'Control de plagas', '0', '2019-03-03', '2020-03-03'), ('SI', '95885412', 'Macarena De Las Mercedes Parrau Gallardo', 'RRHH', 'Administración', 'Administración', '0', '24-09-2022', 'NO'), ('SI', '54151231', 'Raul Manuel Santos Rojas', 'RRHH', 'Administración', 'Administración', '0', '24-09-2022', 'NO');
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Tabla vacaciones:
 
-## Learning Laravel
+INSERT INTO `vacaciones` (`nombre`, `apellido`, `segundoApellido`, `rut`, `diasHabiles`, `tipo`, `inicio`, `termino`, `estado`, `cargo`, `division`, `departamento`, `area`) VALUES ('Luis Alfredo ', 'Arce', 'Contreras', '43534663', '2', 'Progresivas', '2022-09-04', '2022-09-20', 'Aprobada', 'Enfermero', 'Emergencias', 'Salud', 'Salud'), ('Luis ', 'Rodríguez', 'Alcina', '546568565', '10', 'Progresivas', '2022-09-19', '2022-09-28', 'Aprobada', 'Grua', 'Operaciones', 'Operaciones', 'Operaciones');
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Tabla licenciasPermisos
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+INSERT INTO `licencia_permiso` (`empleado`, `rut`, `empNombreCompleto`, `asistenciaTipo`, `asistenciaNombreTipo`, `asistenciaFechaInicio`, `asistenciaFechaTermino`, `asistenciaDiasTomados`) VALUES ('SI', '34568667', 'Ramón Velásquez Cayupe', 'Licencia', 'Licencia', '2022-09-09', '2022-09-12', '3'), ('SI', '435786778', 'Ximena Loreto Sánchez Figueroa', 'Licencia', 'Licencia', '2022-09-10', '2022-09-15', '6');

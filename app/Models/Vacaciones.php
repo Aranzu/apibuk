@@ -10,4 +10,5 @@ class Vacaciones extends Model
     use HasFactory;
     protected $fillable = ['nombre', 'apellido', 'segundoApellido','rut', 'diasHabiles', 'tipo','inicio', 'termino', 'estado','cargo', 'division', 'departamento', 'area'];
     public $table = "vacaciones";
+    protected $primaryKey = 'rut';   
 }

@@ -14,7 +14,6 @@ return new class extends Migration
     public function up()
     {
         Schema::create('licencia_permiso', function (Blueprint $table) {
-            $table->id();
             $table->string('empleado');
             $table->string('rut');
             $table->string('empNombreCompleto');
@@ -23,7 +22,6 @@ return new class extends Migration
             $table->string('asistenciaFechaInicio');
             $table->string('asistenciaFechaTermino');
             $table->string('asistenciaDiasTomados');           
-            $table->timestamps();
         });
     }
 
