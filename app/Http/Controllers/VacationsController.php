@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Vacaciones;
+use App\Models\Vacations;
 
-class VacacionesController extends Controller
+class VacationsController extends Controller
 {   
     /**
      * Display a listing of the resource.
@@ -15,12 +15,12 @@ class VacacionesController extends Controller
     
     public function index()
     {
-        $vacaciones = Vacaciones::all();
+        $vacaciones = Vacations::all();
         return $vacaciones;
     }
-    public function consRutVac($rut)
+    public function idVac($rut)
     {
-        return Vacaciones::findOrFail($rut);
+        return Vacations::findOrFail($rut);
     }
 
 

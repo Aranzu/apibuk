@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Trabajador;
+use App\Models\Employees;
 
-class TrabajadorController extends Controller
+class EmployeesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,13 +14,13 @@ class TrabajadorController extends Controller
      */
     public function index()
     {
-        $trabajador = Trabajador::all();
+        $trabajador = Employees::all();
         return $trabajador;
     }
 
-    public function consRutTra($empleadoRut)
+    public function idEmp($id)
     {
-        return Trabajador::findOrFail($empleadoRut);        
+        return Employees::findOrFail($id);        
     }
 
 }

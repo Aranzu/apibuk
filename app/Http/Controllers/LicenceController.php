@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\LicenciaPermiso;
+use App\Models\Licence;
 
-class LicenciaPermisoController extends Controller
+class LicenceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,12 +15,12 @@ class LicenciaPermisoController extends Controller
 
     public function index()
     {
-        $licenciaPermiso = LicenciaPermiso::all();
+        $licenciaPermiso = Licence::all();
         return $licenciaPermiso;
     }
 
-    public function consRutlic($rut)
+    public function idLic($id)
     {
-        return LicenciaPermiso::findOrFail($rut);
+        return Licence::findOrFail($id);
     }
 }
